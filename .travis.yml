@@ -25,7 +25,7 @@ after_success:
   - ls -a
   - ls app -a
   - ls tests -a
-  - coveralls --root . -i "app/" -e "externals/" -e "bw-output/" --verbose
+  - coveralls --root . -i "app/" -i "tests/" -e "externals/" -e "bw-output/" --verbose
   - ls app -a
   - ls tests -a
   - sonar-scanner
