@@ -14,12 +14,11 @@ addons:
 
 script:
   - qmake
-  - make
+  - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
   - ./tests/tests
 
 after_success:
   - coveralls --root . -E ".*external.*" -E ".*tests.*"
-  - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
   - sonar-scanner
 
 cache:
