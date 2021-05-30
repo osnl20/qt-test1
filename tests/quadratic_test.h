@@ -6,7 +6,7 @@ extern "C" {
 #include "quadratic.h"
 }
 
-TEST(quadraticTest, twoRoots)
+TEST(quadraticTest, twoRoots1)
 {
     // Given
     double a = 1.0, b = -3.0, c = 2.0;
@@ -17,6 +17,20 @@ TEST(quadraticTest, twoRoots)
     // Then
     EXPECT_EQ(2, res.rootsCount);
     EXPECT_EQ(1.0, res.x1);
+    EXPECT_EQ(2.0, res.x2);
+}
+
+TEST(quadraticTest, twoRoots2)
+{
+    // Given
+    double a = -4.0, b = 5.0, c = 6.0;
+
+    // When
+    Roots res = quadratic(a, b, c);
+
+    // Then
+    EXPECT_EQ(2, res.rootsCount);
+    EXPECT_EQ(-0.75, res.x1);
     EXPECT_EQ(2.0, res.x2);
 }
 
