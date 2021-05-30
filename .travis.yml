@@ -9,12 +9,8 @@ before_install:
 
 addons:
   sonarcloud:
-    organization: "seekerk-github"
-addons:
-  sonarcloud:
     organization: "osnl20"
-    token:
-      secure: $SONAR_TOKEN
+    token: $SONAR_TOKEN
 
 script:
   - qmake
