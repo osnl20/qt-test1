@@ -59,9 +59,8 @@ Roots print_and_solve_equation(double a, double b, double c) {
     case ANY_VALUE:
         printf("Вырожденный случай, подходит любое значение x\n");
         break;
-    case CALCULATION_OVERFLOW:
+    default:
         printf("Произошла ошибка вычисления\n");
-        break;
     }
     puts("");
     return result;
