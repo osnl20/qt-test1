@@ -18,7 +18,7 @@ script:
   - ./tests/tests
 
 after_success:
-  - coveralls --root . -E \.\*external\.\* -E \.\*tests\.\*
+  - coveralls --root . -i app/ -i tests/ -e external/
   - sonar-scanner
 
 cache:
