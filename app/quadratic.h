@@ -6,7 +6,7 @@ enum SOLUTION_TYPE {
     ONE_ROOT,
     TWO_ROOTS,
     ANY_VALUE,
-    OVERFLOW
+    CALCULATION_OVERFLOW
 };
 
 typedef struct _Roots {

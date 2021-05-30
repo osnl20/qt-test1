@@ -16,7 +16,7 @@ Roots quadratic(double a, double b, double c)
             result.solution_type = ONE_ROOT;
             result.x1 = -c/b;
             if( !isfinite(result.x1) ) {
-                result.solution_type = OVERFLOW;
+                result.solution_type = CALCULATION_OVERFLOW;
             }
         }
         return result;
@@ -37,7 +37,7 @@ Roots quadratic(double a, double b, double c)
         result.x1 = result.x2 = -b/a/2.0;
     }
     if( !isfinite(d) || !isfinite(result.x1) || !isfinite(result.x2) ) {
-        result.solution_type = OVERFLOW;
+        result.solution_type = CALCULATION_OVERFLOW;
     }
 
     return result;
@@ -59,7 +59,7 @@ void print_and_solve_equation(double a, double b, double c) {
     case ANY_VALUE:
         printf("Вырожденный случай, подходит любое значение x\n");
         break;
-    case OVERFLOW:
+    case CALCULATION_OVERFLOW:
         printf("Произошла ошибка вычисления\n");
         break;
     }

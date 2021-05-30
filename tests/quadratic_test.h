@@ -113,7 +113,7 @@ TEST(quadratic_test, overflow_case_1) {
     Roots res = quadratic(a, b, c);
 
     // Then
-    EXPECT_EQ(OVERFLOW, res.solution_type);
+    EXPECT_EQ(CALCULATION_OVERFLOW, res.solution_type);
 }
 
 TEST(quadratic_test, overflow_case_2) {
@@ -124,5 +124,5 @@ TEST(quadratic_test, overflow_case_2) {
     Roots res = quadratic(a, b, c);
 
     // Then
-    EXPECT_EQ(OVERFLOW, res.solution_type);
+    EXPECT_EQ(CALCULATION_OVERFLOW, res.solution_type);
 }
