@@ -17,6 +17,6 @@ typedef struct _Roots {
 
 Roots quadratic(double a, double b, double c);
 
-void print_and_solve_equation(double a, double b, double c);
+Roots print_and_solve_equation(double a, double b, double c);
 
 #endif // QUADRATIC_H
