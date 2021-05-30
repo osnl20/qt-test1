@@ -20,7 +20,9 @@ script:
 after_success:
   - pwd
   - ls -a
+  - ls app -a
   - coveralls --root . -i "app/" -e "externals/" -e "bw-output/" --verbose
+  - ls app -a
   - sonar-scanner
 
 cache:
