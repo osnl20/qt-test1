@@ -8,7 +8,7 @@ Roots quadratic(double a, double b, double c)
         result.rootsCount = 2;
         result.x1 = (-b-d)/a/2.0;
         result.x2 = (-b+d)/a/2.0;
-    } if ( d == 0.0 ) {
+    } else if ( d == 0.0 ) {
         result.rootsCount = 1;
         result.x1 = result.x2 = -b/a/2.0;
     }
