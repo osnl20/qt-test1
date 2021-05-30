@@ -15,16 +15,17 @@ addons:
 script:
   - qmake
   - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
+  - ls -la bw-output
   - ./tests/tests
 
 after_success:
   - pwd
-  - ls -a
-  - ls app -a
-  - ls tests -a
-  - coveralls --root . --verbose
-  - ls app -a
-  - ls tests -a
+  - ls -la
+  - ls -la app -a
+  - ls -la tests
+  - coveralls --root . --verbose -E ".*external.*" -E ".*tests.*"
+  - ls -la app
+  - ls -la tests
   - sonar-scanner
 
 cache:
