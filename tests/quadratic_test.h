@@ -83,7 +83,7 @@ TEST(quadratic_test, stranger_things_2) {
     EXPECT_EQ(0.0, res.x1);
 }
 
-TEST(quadraticTest, stranger_things_3) {
+TEST(quadratic_test, stranger_things_3) {
     // Given
     double a = 0.0, b = 0.0, c = 1.0;
 
@@ -105,7 +105,7 @@ TEST(quadratic_test, stranger_things_4) {
     EXPECT_EQ(ANY_VALUE, res.solution_type);
 }
 
-TEST(quadratic_test, edge_case_1) {
+TEST(quadratic_test, overflow_case_1) {
     // Given
     double a = DBL_MAX, b = DBL_MAX, c = DBL_MAX;
 
@@ -116,7 +116,7 @@ TEST(quadratic_test, edge_case_1) {
     EXPECT_EQ(OVERFLOW, res.solution_type);
 }
 
-TEST(quadratic_test, edge_case_2) {
+TEST(quadratic_test, overflow_case_2) {
     // Given
     double a = 0.0, b = 0.1, c = DBL_MAX;
 
