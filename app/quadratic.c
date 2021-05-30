@@ -43,7 +43,7 @@ Roots quadratic(double a, double b, double c)
     return result;
 }
 
-void print_and_solve_equation(double a, double b, double c) {
+Roots print_and_solve_equation(double a, double b, double c) {
     printf("Уравнение: %f * x^2 + %f * x + %f\n", a, b, c);
     Roots result = quadratic(a, b, c);
     switch(result.solution_type) {
@@ -64,4 +64,5 @@ void print_and_solve_equation(double a, double b, double c) {
         break;
     }
     puts("");
+    return result;
 }
