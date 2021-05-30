@@ -127,12 +127,12 @@ TEST(quadratic_test, overflow_case_2) {
     EXPECT_EQ(CALCULATION_OVERFLOW, res.solution_type);
 }
 
-TEST(print_and_solve_equationc_test, just_test) {
+TEST(print_and_solve_equation_test, just_test) {
     // Given
     double a = -2.0, b = 3.0, c = 5.0;
 
     // When
-    Roots res = quadratic(a, b, c);
+    Roots res = print_and_solve_equation(a, b, c);
 
     // Then
     EXPECT_EQ(TWO_ROOTS, res.solution_type);
