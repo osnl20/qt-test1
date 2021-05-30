@@ -3,18 +3,12 @@
 #include "myfunc.h"
 #include "quadratic.h"
 
-int main()
-{
-    double a = 2.0, b = 3.0, c = 5.0;
-    printf("Quadratic equation: %f * x^2 + %f * x + %f\n", a, b, c);
-    Roots result = quadratic(a, b, c);
-    printf("Roots count = %d\n", result.rootsCount);
-    if(result.rootsCount == 2) {
-        printf("x1 = %f\n", result.x1);
-        printf("x2 = %f\n", result.x2);
-    } else if(result.rootsCount == 1) {
-        printf("x = %f\n", result.x1);
-    }
+int main() {
+    print_and_solve_equation(2.0, 3.0, 5.0);
+    print_and_solve_equation(4.0, 4.0, 1.0);
+    print_and_solve_equation(-2.0, 3.0, 5.0);
+    print_and_solve_equation(0, 0, 0);
+    print_and_solve_equation(1, 1e300, 1);
 
     printf("Hello World!\n");
     return myfunc(2);
