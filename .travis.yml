@@ -18,6 +18,8 @@ script:
   - ./tests/tests
 
 after_success:
+  - pwd
+  - ls -a
   - coveralls --root . -i app/ -i tests/ -e external/
   - sonar-scanner
 
