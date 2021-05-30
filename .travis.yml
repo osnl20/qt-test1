@@ -21,8 +21,10 @@ after_success:
   - pwd
   - ls -a
   - ls app -a
+  - ls tests -a
   - coveralls --root . -i "app/" -e "externals/" -e "bw-output/" --verbose
   - ls app -a
+  - ls tests -a
   - sonar-scanner
 
 cache:
